@@ -6,8 +6,8 @@ body{
 
 .container{
   position: relative;
-  left: 300px;
-  top: 20px;
+  left: 360px;
+  top: 60px;
   display: block;
   margin: auto;
   width: 30%;
@@ -77,15 +77,18 @@ input:hover {
 .image{
   display: block;
   position: absolute;
-  top: 80px;
-  left: 40px;
-  width: 350px;
-  height: 300px;
+  top: 220px;
+  left: 130px;
+  width: 390px;
+  height: 330px;
   max-height: 100%;
   border-radius: 7px;
 }
 
-.tittle{
-  position: relative;
-  
+h2{
+  position: absolute;
+  top: 100px;
+  left: 200px;
+  font-size: 50px;
+  font-family: sans-serif;
 }
