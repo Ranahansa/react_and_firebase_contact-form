@@ -1,7 +1,7 @@
 import React from 'react';
 import "../App.css";
 import image13 from "../assets/13.webp";
-import { collection, add } from 'firebase/firestore';
+import { collection, addDoc } from 'firebase/firestore';
 import { db } from "../firebase";
 
 const Contact = () => {
@@ -13,16 +13,15 @@ const Contact = () => {
         e.preventDefault();
 
         try {
-            const contactsCollection = collection(db, "contacts");
-            await add(contactsCollection, {
+            const docRef = await addDoc(collection(db, "contacts"), {
                 name: name,
                 email: email,
                 message: message
             });
 
-            console.log("Document added successfully");
+            alert("Message sent successfully!");
         } catch (error) {
-            console.error("Error adding document: ", error);
+            alert("error submitting form: ", error);
         }
 
         setName("");
@@ -54,5 +53,6 @@ const Contact = () => {
 };
 
 export default Contact;
+
 
 
